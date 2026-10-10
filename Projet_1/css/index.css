@@ -21,6 +21,9 @@ nav {
     padding: 0.5% 0;
     text-align: center;
 }
+.nav-idx {
+    color: #9e7c16;
+}
 
 
 .nav-links {
@@ -67,7 +70,7 @@ ul li a:hover {
 
 .s0 {
     padding: 5%;
-    background-color: #522121;
+    background-color: #21238b;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
