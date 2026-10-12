@@ -70,7 +70,7 @@ ul li a:hover {
 
 .s0 {
     padding: 5%;
-    background-color: #21238b;
+    background-color: #FF7E7E;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -161,6 +161,59 @@ ul li a:hover {
 }
 .divs1 p{
     font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        padding: 10px 16px;
+    }
+
+    .container {
+        height: auto;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .section {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        scroll-snap-align: none;
+        padding: clamp(24px, 6vw, 48px);
+    }
+
+    .s0 {
+        padding-top: clamp(32px, 8vw, 64px);
+    }
+
+    .s0 h1,
+    .s1 h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.2;
+    }
+
+    .divs0 p,
+    .divs1 p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+        overflow-wrap: anywhere;
+    }
+
+    .divs1 {
+        width: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
