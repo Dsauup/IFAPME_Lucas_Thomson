@@ -40,12 +40,15 @@ ul li a {
     text-decoration: none;
     color: #bdb9b9;
     display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
 }
 ul li a:hover {
-    text-transform: transition;
     color: #9e7c16;
     transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
+    box-shadow: 0 0 8px rgba(156, 123, 21, 0.7), 0 0 16px rgba(158, 124, 22, 0.4);
 }
 
 .container {
@@ -80,9 +83,10 @@ ul li a:hover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 4%;
 }
 .divs0 p{
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2vw, 2rem);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -158,9 +162,10 @@ ul li a:hover {
 }
 .s1 h1{
     font-size: 3rem;
+    padding-bottom: 4%;
 }
 .divs1 p{
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2vw, 2rem);
 }
 
 @media (max-width: 768px) {
@@ -223,4 +228,72 @@ ul li a:hover {
     .s1-carousel img:first-child {
         opacity: 0.5;
     }
+}
+
+.explink{
+    text-decoration: none;
+    color: #9e7c16;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+}
+.explink :hover{
+    color: #9e7c16;
+    transform: translateY(-5px) scale(1.1);
+    
+}
+.divs2 {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+.s2 h1{
+    font-size: 3rem;
+    padding-bottom: 4%;
+}
+.divs2 p{
+    font-size: clamp(1.5rem, 1.2vw, 2rem);
+}
+.divs3 {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.divs3 h1{
+    font-size: 3rem;
+    padding-bottom: 4%;
+    align-self: flex-start;
+    text-align: left;
+}
+.divs3 p{
+    font-size: clamp(1.5rem, 1.2vw, 2rem);
+}
+
+@media (min-width: 1600px) {
+    .divs0 {
+        max-width: 1440px;
+    }
+
+    .divs1,
+    .divs2,
+    .divs3 {
+        width: min(80%, 1440px);
+    }
+}
+
+footer {
+    padding: 12px 16px;
+    background-color: #222222;
+    color: #e9e5e5;
+    text-align: center;
 }
