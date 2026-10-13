@@ -48,7 +48,6 @@ ul li a:hover {
     color: #9e7c16;
     transform: translateY(-5px) scale(1.1);
     text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
-    box-shadow: 0 0 8px rgba(156, 123, 21, 0.7), 0 0 16px rgba(158, 124, 22, 0.4);
 }
 
 .container {
@@ -233,12 +232,14 @@ ul li a:hover {
 .explink{
     text-decoration: none;
     color: #9e7c16;
+    display: inline-block;
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
 }
-.explink :hover{
+.explink:hover{
     color: #9e7c16;
     transform: translateY(-5px) scale(1.1);
-    
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
 }
 .divs2 {
     position: relative;
