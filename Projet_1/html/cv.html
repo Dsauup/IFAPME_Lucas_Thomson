@@ -3,20 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cv.css">
     <title>CV - Lucas Thomson</title>
 </head>
 <body>
     <header>
         <nav>
             <ul class="nav-links">
-                <li><a href="reseaux.html" class="nav-idx">Réseaux</a></li>
-                <li><a href="about.html">CV</a></li>
+                <li><a href="reseaux.html" >Réseaux</a></li>
+                <li><a href="cv.html" class="nav-idx">CV</a></li>
                 <li><a href="https://github.com/Dsauup" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="index.html" >Qui suis-je ?</a></li>
-                <li><a href="contact.html">Mes expériences</a></li>
-                <li><a href="contact.html">FAQ - HTML CSS</a></li>
+                <li><a href="exp.html">Mes expériences</a></li>
+                <li><a href="faq.html">FAQ - HTML CSS</a></li>
             </ul>
         </nav>
     </header>
+     <main>
+        <section class="section s0">
+            <h1>Mon CV</h1>
+            <div class="divs0">
+                <div class="cv-image-container">
+                    <img id="cvImage" class="cv-image blurred" src="../img/CV.png" alt="CV de Lucas Thomson">
+                    <button id="revealCv" class="reveal-cv" type="button">Afficher le CV</button>
+                </div>
+                <div class="cvpdf nav-idx">
+                    <img src="../img/pdf.png" alt="">
+                    <a href="../downloadable/NOUV CV.pdf" target="_blank" rel="noopener noreferrer">CV - Lucas Thomson</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const cvImage = document.getElementById('cvImage');
+        const revealCv = document.getElementById('revealCv');
+
+        revealCv.addEventListener('click', () => {
+            cvImage.classList.remove('blurred');
+            revealCv.remove();
+        });
+    </script>
 </body>
 </html>

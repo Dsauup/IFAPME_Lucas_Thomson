@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: #e9e5e5;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+nav {
+    background-color: #222222;
+    padding: 0.5% 0;
+    text-align: center;
+}
+.nav-idx {
+    color: #9e7c16;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px clamp(12px, 3vw, 40px);
+    color: #f5f1f1;
+    list-style: none;
+    background-color: #222222;
+    padding: 10px 16px;
+}
+ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #bdb9b9;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li a:hover {
+    color: #9e7c16;
+    transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
+}
+.s0 {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.s0 h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.divs1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+.divs1 p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: min(600px, 100%);
+    overflow-wrap: anywhere;
+}
+
+.section {
+    min-height: 100vh;
+    padding: clamp(2rem, 6vw, 5rem);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 4px 12px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .section {
+        min-height: auto;
+        padding: clamp(2rem, 8vw, 3.5rem) 1.25rem;
+    }
+
+    .s0 h1 {
+        font-size: clamp(1.75rem, 8vw, 2rem);
+    }
+
+    .s0 p,
+    .divs1 p {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+}

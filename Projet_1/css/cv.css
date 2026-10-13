@@ -7,14 +7,20 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+    display: none;
 }
 body {
     font-family: Arial, sans-serif;
     background-color: #111111;
     color: #e9e5e5;
     line-height: 1.6;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 nav {
     background-color: #222222;
@@ -29,11 +35,12 @@ nav {
 .nav-links {
     display: flex;
     justify-content: center;
-    gap: 5%;
+    flex-wrap: wrap;
+    gap: 8px clamp(12px, 3vw, 40px);
     color: #f5f1f1;
     list-style: none;
     background-color: #222222;
-    padding: 10px 0;
+    padding: 10px 16px;
 }
 
 ul li a {
@@ -50,4 +57,124 @@ ul li a:hover {
     color: #9e7c16;
     transform: translateY(-5px) scale(1.1);
     text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
+}
+.divs0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.cv-image-container {
+    position: relative;
+    width: fit-content;
+    max-width: min(80%, 56rem);
+    margin-bottom: 1rem;
+}
+
+.cv-image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.cv-image {
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+}
+
+.cv-image:not(.blurred) {
+    filter: blur(0);
+}
+
+.reveal-cv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: rgba(17, 17, 17, 0.85);
+    color: #e9e5e5;
+    font: inherit;
+    cursor: pointer;
+}
+
+.reveal-cv:hover {
+    background-color: #9e7c16;
+    color: #111111;
+}
+
+.divs0 p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.cvpdf {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cvpdf a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cvpdf a:hover {
+    color: #9e7c16;
+    transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
+}
+
+.cvpdf img {
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.s0 h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    text-decoration: underline;
+}
+.cvpdf {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 4px 12px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .s0 h1 {
+        padding: 2rem 1rem 0;
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .divs0 {
+        min-height: auto;
+        padding: 1rem 1rem 2rem;
+    }
+
+    .cv-image-container {
+        max-width: 100%;
+    }
 }
