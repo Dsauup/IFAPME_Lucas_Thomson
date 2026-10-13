@@ -37,6 +37,7 @@ nav {
 }
 
 ul li a {
+    font-size: 1.2rem;
     text-decoration: none;
     color: #bdb9b9;
     display: inline-block;
@@ -44,8 +45,29 @@ ul li a {
     border-radius: 4px;
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
 }
+ul li img {
+    width: 28px !important;
+    height: 28px !important;
+    vertical-align: middle;
+    margin-left: 6px;
+}
 ul li a:hover {
     color: #9e7c16;
     transform: translateY(-5px) scale(1.1);
     text-shadow: 0 0 8px rgba(158, 124, 22, 0.9);
+}
+.divs0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.divs0 h1 {
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+.divs0 p {
+    font-size: 1.6rem;
 }
